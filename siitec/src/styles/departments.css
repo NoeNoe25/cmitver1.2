@@ -2,7 +2,7 @@
 .departments {
   position: relative;
   padding: 5rem 8%;
-  background-color: var(--grey-dark);
+  background-color: var(--slate-darker);
 }
 
 .tech-pattern {
@@ -15,7 +15,7 @@
   background-image: 
     radial-gradient(
       circle at center,
-      var(--copper) 0%,
+      var(--gold-copper) 0%,
       transparent 70%
     );
   pointer-events: none;
@@ -29,11 +29,11 @@
 .section-header h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: var(--grey-text);
+  color: var(--slate-lighter);
 }
 
 .section-header h2 span {
-  color: var(--copper);
+  color: var(--gold-copper);
   position: relative;
 }
 
@@ -49,7 +49,7 @@
 }
 
 .section-header p {
-  color: var(--grey-text);
+  color: var(--slate-lighter);
   opacity: 0.9;
   font-size: 1.2rem;
   max-width: 700px;
@@ -71,7 +71,7 @@
   flex: 1;
   min-width: 300px;
   max-width: 450px;
-  background: var(--grey-medium);
+  background: rgba(61, 74, 79, 0.7);
   border-radius: var(--border-radius-lg);
   padding: 2.5rem;
   position: relative;
@@ -79,6 +79,7 @@
   transition: var(--transition-medium);
   box-shadow: var(--shadow-md);
   border-top: 3px solid transparent;
+  backdrop-filter: blur(4px);
 }
 
 .department-card:hover {
@@ -87,36 +88,37 @@
 }
 
 .department-card.cmit {
-  border-color: var(--copper-dark);
+  border-color: var(--gold-copper-dark);
 }
 
 .department-card.amt {
-  border-color: var(--copper-light);
+  border-color: var(--gold-copper-light);
 }
 
 .dept-content h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: var(--grey-text);
+  color: var(--slate-lighter);
 }
+
 
 .dept-acronym {
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  color: var(--copper);
+  color: var(--gold-copper);
 }
 
 .department-card.cmit .dept-acronym {
-  color: var(--copper-dark);
+  color: var(--gold-copper-dark);
 }
 
 .department-card.amt .dept-acronym {
-  color: var(--copper-light);
+  color: var(--gold-copper-light);
 }
 
 .dept-description {
-  color: var(--grey-text);
+  color: var(--slate-lighter);
   opacity: 0.9;
   line-height: 1.6;
 }
@@ -135,7 +137,6 @@
   opacity: 1;
   height: 6px;
 }
-
 /* Collaboration Symbol */
 .collab-symbol {
   display: flex;
@@ -149,18 +150,18 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: rgba(212, 160, 89, 0.2);
-  border: 2px solid var(--copper);
+  background: rgba(201, 166, 107, 0.2);
+  border: 2px solid var(--gold-copper);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2rem;
-  color: var(--copper-light);
+  color: var(--gold-copper-light);
   margin-bottom: 0.5rem;
 }
 
 .symbol-text {
-  color: var(--copper);
+  color: var(--gold-copper);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -188,5 +189,31 @@
   
   .symbol-text {
     margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .departments {
+    padding: 3rem 5%;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .section-header p {
+    font-size: 1rem;
+  }
+  
+  .department-card {
+    padding: 1.5rem;
+  }
+  
+  .dept-content h3 {
+    font-size: 1.3rem;
+  }
+  
+  .dept-acronym {
+    font-size: 1.5rem;
   }
 }

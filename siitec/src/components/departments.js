@@ -1,7 +1,10 @@
 // src/components/Departments.jsx
 import React from 'react';
 import '../styles/theme.css';
-import '../styles/departments.css'
+import '../styles/departments.css';
+// Import your logo images - make sure these paths are correct for your project
+import cmit from '../assets/cmit.png';
+import ami from '../assets/ami.jpg';
 
 const Departments = () => {
   return (
@@ -14,6 +17,9 @@ const Departments = () => {
       
       <div className="departments-showcase">
         <div className="department-card cmit">
+          <div className="dept-logo">
+            <img src={cmit} alt="CMIT Logo" class="cmit"/>
+          </div>
           <div className="dept-content">
             <h3>College of Manufacturing Integrated Technology</h3>
             <p className="dept-acronym">CMIT</p>
@@ -30,6 +36,9 @@ const Departments = () => {
         </div>
 
         <div className="department-card amt">
+          <div className="dept-logo">
+            <img src={ami} alt="AMT Logo" class="ami" />
+          </div>
           <div className="dept-content">
             <h3>Advanced Manufacturing Technology</h3>
             <p className="dept-acronym">AMT</p>

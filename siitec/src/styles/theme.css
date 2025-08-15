@@ -1,116 +1,48 @@
-/* Luxe Copper-Gold-Bronze Tech Theme */
+/* src/styles/theme.css */
 :root {
-  /* Metallic Copper-Gold-Bronze Palette */
-  --copper: #D4A059;  /* Rich copper-gold base */
-  --copper-light: #E8B97C;  /* Luminous gold highlight */
-  --copper-bright: #F5D0A2;  /* Bright golden glow */
-  --copper-dark: #B58C4A;  /* Deep bronze tone */
-  --copper-darker: #8A6C3B;  /* Aged bronze shadow */
+  /* New Slate Grey (#758384) and Gold-Copper Palette */
+  --slate-base: #758384;
+  --slate-dark: #5a686e;
+  --slate-darker: #3d4a4f;
+  --slate-light: #8f9fa6;
+  --slate-lighter: #b0bec5;
   
-  /* Modern Tech Greys */
-  --grey-darker: #0F0F0F;  /* Deep matte background */
-  --grey-dark: #758384;  /* Card surfaces */
-  --grey-medium: #2D2D2D;  /* UI elements */
-  --grey-light: #3C3C3C;  /* Borders and details */
-  --grey-lighter: #4B4B4B;  /* Secondary text */
-  --grey-text: #EAEAEA;  /* Primary content */
-  --white: #FFFFFF;  /* Pure highlights */
+  /* Gold-Copper Colors */
+  --gold-copper: #c9a66b;
+  --gold-copper-dark: #a88448;
+  --gold-copper-darker: #8a6a36;
+  --gold-copper-light: #e0c28a;
+  --gold-copper-bright: #f0d5a0;
   
-  /* Metallic Gradients */
-  --tech-gradient: linear-gradient(
-    135deg, 
-    var(--copper) 0%, 
-    #3A2C1A 100%
-  );
-  --tech-gradient-reverse: linear-gradient(
-    135deg, 
-    var(--grey-dark) 0%, 
-    var(--copper) 100%
-  );
-  --metal-overlay: linear-gradient(
-    to bottom, 
-    rgba(15, 15, 15, 0.9) 0%, 
-    rgba(58, 44, 26, 0.7) 100%
-  );
+  /* Text Colors */
+  --text-dark: #2d3748;
+  --text-light: #f8f9fa;
+  --text-muted: #a0aec0;
   
-  /* Luxe Lighting Effects */
-  --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.5);
-  --shadow-md: 0 4px 24px rgba(0, 0, 0, 0.55);
-  --shadow-lg: 0 8px 36px rgba(0, 0, 0, 0.6);
-  --glow-copper: 0 0 18px rgba(212, 160, 89, 0.7);
-  --glow-metal: 0 0 10px rgba(212, 160, 89, 0.4);
+  /* Gradients */
+  --tech-gradient: linear-gradient(135deg, var(--gold-copper) 0%, var(--slate-base) 100%);
+  --tech-gradient-reverse: linear-gradient(135deg, var(--slate-base) 0%, var(--gold-copper) 100%);
   
-  /* Refined Borders */
-  --border-radius: 6px;
-  --border-radius-lg: 14px;
-  --border-copper: 1px solid var(--copper);
-  --border-tech: 1px solid var(--grey-light);
+  /* Shadows */
+  --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.25);
+  --glow-gold: 0 0 10px rgba(201, 166, 107, 0.5);
   
-  /* Smooth Metallic Transitions */
-  --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-medium: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Borders */
+  --border-radius: 8px;
+  --border-radius-lg: 16px;
+  --border-gold: 1px solid var(--gold-copper);
+  --border-slate: 1px solid var(--slate-light);
+  
+  /* Transitions */
+  --transition-fast: all 0.2s ease;
+  --transition-medium: all 0.3s ease;
+  --transition-slow: all 0.5s ease;
 }
 
-/* Enhanced Metallic Elements */
-.button-metallic {
-  background: linear-gradient(
-    to bottom,
-    var(--copper-light) 0%,
-    var(--copper-dark) 100%
-  );
-  box-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.3),
-    inset 0 1px 2px rgba(255, 255, 255, 0.2);
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-  position: relative;
-}
-
-.button-metallic::after {
-  content: '';
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  right: 1px;
-  height: 50%;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.15) 0%,
-    transparent 100%
-  );
-  border-radius: var(--border-radius);
-}
-
-/* Metallic Text Effects */
-.metallic-text {
-  background: linear-gradient(
-    to right,
-    var(--copper-light),
-    var(--copper-dark),
-    var(--copper-light)
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-/* Patina Effect (optional) */
-.patina-effect {
-  position: relative;
-}
-
-.patina-effect::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    135deg,
-    transparent 65%,
-    rgba(83, 104, 114, 0.15) 100%
-  );
-  pointer-events: none;
+/* Set base colors */
+body {
+  background-color: var(--slate-darker);
+  color: var(--text-light);
 }
