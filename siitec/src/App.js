@@ -16,11 +16,10 @@ function App() {
     <div className="App">
       <Header />
       <main>
-        <Hero />
         <ParallaxSection />
         <PartnersBanner/>
         <AnimatedFeatures />
-        <Departments />
+        <Departments/>
         <ScrollRevealSection />
         <Faculty />
       </main>
