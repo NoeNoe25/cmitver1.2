@@ -31,8 +31,8 @@ const PartnersBanner = () => {
       <h3 className="banner-title">Our Academic Partners</h3>
       <div className="partners-banner">
         <div className="partners-track">
-          {duplicatedPartners.map((partner) => (
-            <div key={`${partner.id}-1`} className="partner-logo">
+          {duplicatedPartners.map((partner, index) => (
+            <div key={`partner-${partner.id}-${index}`} className="partner-logo">
               <img 
                 src={partner.logo} 
                 alt={partner.name} 

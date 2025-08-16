@@ -7,6 +7,9 @@ import Footer from './components/footer';
 import './App.css';
 import Departments from './components/departments';
 import PartnersBanner from './components/Partnerbanner';
+import AnimatedFeatures from './components/AnimatedFeatures';
+import ParallaxSection from './components/ParallaxSection';
+import ScrollRevealSection from './components/ScrollRevealSection';
 
 function App() {
   return (
@@ -14,8 +17,11 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <ParallaxSection />
         <PartnersBanner/>
+        <AnimatedFeatures />
         <Departments />
+        <ScrollRevealSection />
         <Faculty />
       </main>
       <Footer />
