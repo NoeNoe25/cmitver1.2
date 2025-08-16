@@ -4,6 +4,7 @@ import '../styles/hero.css';
 import backgroundVideo from '../assets/video1.mp4';
 import photo1 from '../assets/photo1.jpg';
 import photo2 from '../assets/photo2.jpg';
+
 const Hero = () => {
   const videoRef = useRef(null);
   const heroRef = useRef(null);
@@ -41,6 +42,12 @@ const Hero = () => {
     }
   ];
 
+  const techStats = [
+    { number: "12+", label: "Tech Labs" },
+    { number: "350+", label: "Projects" },
+    { number: "96%", label: "Employment" }
+  ];
+
   return (
     <section className="hero" id="home" ref={heroRef}>
       <div className="video-background">
@@ -55,9 +62,21 @@ const Hero = () => {
         <div className="hero-content left-align">
           <h1>Shaping the Future of <span>Integrated Technology</span></h1>
           <p>At SiiTec, we blend cutting-edge disciplines to create innovative solutions for tomorrow's challenges.</p>
+          
+          
           <div className="hero-buttons">
             <button className="primary-button">Explore Programs</button>
             <button className="secondary-button">Virtual Tour</button>
+          </div>
+
+           {/* Tech Stats */}
+          <div className="tech-stats-container">
+            {techStats.map((stat, index) => (
+              <div key={index} className="tech-stat">
+                <div className="tech-stat-number">{stat.number}</div>
+                <div className="tech-stat-label">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
 

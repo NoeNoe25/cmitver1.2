@@ -6,6 +6,7 @@ import Faculty from './components/faculty';
 import Footer from './components/footer';
 import './App.css';
 import Departments from './components/departments';
+import PartnersBanner from './components/Partnerbanner';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <PartnersBanner/>
         <Departments />
         <Faculty />
       </main>

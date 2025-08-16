@@ -1,0 +1,125 @@
+/* components/PartnersBanner.css */
+.partners-banner-container {
+  background: var(--slate-darker);
+  padding: 1.5rem 0;
+  border-top: var(--border-gold);
+  border-bottom: var(--border-gold);
+  margin: 2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-title {
+  text-align: center;
+  color: var(--gold-copper-light);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: var(--glow-gold);
+}
+
+.partners-banner {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.partners-track {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  animation: scroll 30s linear infinite;
+  width: calc(250px * 16); /* Adjust based on number of logos */
+  will-change: transform;
+}
+
+.partner-logo {
+  height: 80px;
+  width: 200px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  transition: var(--transition-medium);
+  filter: grayscale(30%) brightness(0.9);
+}
+
+.partner-logo:hover {
+  filter: grayscale(0%) brightness(1.1);
+  transform: scale(1.05);
+}
+
+.partner-logo img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Pause animation on hover */
+.partners-banner:hover .partners-track {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 8)); /* Half of total width */
+  }
+}
+
+/* Alternative animation styles */
+
+/* Style 2: Fade in/out animation */
+.alternate-style-1 .partners-track {
+  animation: scroll-fade 20s linear infinite;
+}
+
+@keyframes scroll-fade {
+  0%, 100% {
+    opacity: 0.5;
+    transform: translateX(0) scale(0.95);
+  }
+  10%, 90% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+/* Style 3: Bounce animation */
+.alternate-style-2 .partner-logo {
+  animation: bounce 3s ease-in-out infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .partners-track {
+    gap: 1rem;
+    animation-duration: 20s;
+  }
+  
+  .partner-logo {
+    height: 60px;
+    width: 150px;
+  }
+  
+  .banner-title {
+    font-size: 1.2rem;
+  }
+}

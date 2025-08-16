@@ -44,7 +44,6 @@
 .hero-container.split-layout {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
   height: 100%;
   padding: 0 5%;
   gap: 2rem;
@@ -57,7 +56,7 @@
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content:top;
   position: relative;
   z-index: 1;
 }
@@ -67,7 +66,7 @@
   margin-bottom: 2rem;
   line-height: 1.2;
   font-weight: 700;
-  color: var(--slate-lighter);
+  color: var(--text-light);
 }
 
 .hero-content.left-align h1 span {
@@ -107,7 +106,7 @@
 .hero-content.left-align p {
   font-size: 1.3rem;
   margin-bottom: 2.5rem;
-  color: var(--slate-lighter);
+  color: var(--text-light);
   line-height: 1.6;
 }
 
@@ -168,6 +167,7 @@
   scrollbar-width: thin;
   scrollbar-color: var(--gold-copper) rgba(61, 74, 79, 0.5);
   height: fit-content;
+  align-self: flex-end;
 }
 
 .news-cards-container.horizontal-right::-webkit-scrollbar {
@@ -246,9 +246,10 @@
 }
 
 .card-date {
-  color: var(--slate-lighter);
+  color: var(--greywhite);
   font-size: 9px;
   opacity: 0.8;
+
   margin-top:-3px;
   text-align: left;
 }
@@ -362,5 +363,71 @@
   
   .card-image {
     flex: 0 0 90px;
+  }
+}
+
+
+.tech-stats-container {
+  display: flex;
+  gap: 3rem;
+  margin: 3rem 0;
+  flex-wrap: wrap;
+}
+
+.tech-stat {
+  text-align: center;
+  transition: var(--transition-medium);
+  cursor: pointer;
+}
+
+.tech-stat-number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, var(--gold-copper), var(--gold-copper-bright));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: var(--transition-medium);
+}
+
+.tech-stat:hover .tech-stat-number {
+  transform: scale(1.1);
+  text-shadow: 0 0 10px rgba(201, 166, 107, 0.3);
+}
+
+.tech-stat-label {
+  font-size: 0.9rem;
+  color: var(--greywhite);
+  margin-top: 0.3rem;
+  opacity: 0.8;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .tech-stats-container {
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .tech-stat {
+    min-width: 30%;
+  }
+  
+  .tech-stat-number {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-stats-container {
+    gap: 0.5rem;
+  }
+  
+  .tech-stat-number {
+    font-size: 1.3rem;
+  }
+  
+  .tech-stat-label {
+    font-size: 0.8rem;
   }
 }
