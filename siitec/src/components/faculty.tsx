@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { theme } from '../styles/theme2.ts';
+import professor1 from '../assets/professor1.jpg';
+import professor2 from '../assets/professor2.jpg';
+
 
 const FacultySection = styled.section`
   padding: ${theme.spacing.xxl} 0;
@@ -255,7 +258,7 @@ const FacultyMembers: React.FC = () => {
       name: 'Dr. Sarah Chen',
       title: 'Professor of Advanced Manufacturing',
       bio: 'Specializes in robotics and automation systems with over 15 years of industry experience.',
-      image: 'placeholder', // Replace with actual image path
+      image: professor1, // Replace with actual image path
     },
     {
       id: 2,

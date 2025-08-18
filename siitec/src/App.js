@@ -18,7 +18,6 @@ function App() {
         <ParallaxSection />
         <PartnersBanner/>
         <AnimatedFeatures />
-       
         <ScrollRevealSection />
         <FacultyMembers />
       </main>
