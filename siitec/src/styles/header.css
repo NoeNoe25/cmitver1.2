@@ -2,13 +2,17 @@
    HEADER BASE STYLES
 ===================== */
 .header {
-  background-color: var(--slate-base);
-  box-shadow: var(--shadow-sm);
+  background-color: rgba(10, 25, 47, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   position: sticky;
   top: 0;
   z-index: 1000;
   width: 100%;
-  border-bottom: 1px solid var(--slate-dark);
+  border-bottom: 1px solid rgba(184, 115, 51, 0.3);
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
 }
 
 .header-container {
@@ -29,16 +33,18 @@
    LOGO STYLES
 ===================== */
 .logo h1 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin: 0;
   color: var(--text-light);
   font-weight: 700;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 .logo h1 span {
   color: var(--gold-copper);
   position: relative;
+  text-shadow: 0 0 10px rgba(184, 115, 51, 0.5);
 }
 
 .logo h1 span::after {
@@ -48,7 +54,8 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background: var(--tech-gradient);
+  background: linear-gradient(90deg, rgba(184, 115, 51, 0.7), rgba(184, 115, 51, 0.3));
+  box-shadow: 0 0 8px rgba(184, 115, 51, 0.5);
 }
 
 .logo p {
@@ -86,11 +93,29 @@
   font-weight: 500;
   transition: var(--transition-medium);
   border-radius: var(--border-radius-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(184, 115, 51, 0.7), rgba(184, 115, 51, 0.3));
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
 }
 
 .nav-link:hover {
-  background-color: rgba(201, 166, 107, 0.08);
   color: var(--gold-copper-light);
+  text-shadow: 0 0 8px rgba(184, 115, 51, 0.3);
+}
+
+.nav-link:hover:before {
+  width: 80%;
 }
 .dropdown-toggle:hover {
   background: none; /* prevent grey background */
@@ -166,21 +191,40 @@
 }
 
 .apply-button {
-  background: var(--gold-copper-forbutton);
+  background: linear-gradient(135deg, var(--gold-copper) 0%, var(--gold-copper-light) 100%);
   color: var(--slate-darker);
   border: none;
-  padding: 0.6rem 1.4rem;
+  padding: 0.7rem 1.5rem;
   border-radius: var(--border-radius);
   font-weight: 600;
   cursor: pointer;
-  transition: var(--transition-medium);
-  box-shadow: var(--shadow-sm);
-  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 15px rgba(184, 115, 51, 0.3);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.apply-button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--gold-copper-light) 0%, var(--gold-copper) 100%);
+  transition: all 0.4s ease;
+  z-index: -1;
 }
 
 .apply-button:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(184, 115, 51, 0.4);
+}
+
+.apply-button:hover:before {
+  left: 0;
 }
 
 .language-switcher {
