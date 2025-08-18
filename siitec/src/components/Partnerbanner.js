@@ -1,26 +1,26 @@
 // components/PartnersBanner.jsx
 import React from 'react';
 import '../styles/PartnerBanner.css';
-import ais from '../assets/logos/ais.png';
-import exelon from '../assets/logos/exelon.png';
-import amazon from '../assets/logos/amazon.png';
-import google from '../assets/logos/google.png';
-import thairung from '../assets/logos/thairung.png';
-import wf from '../assets/logos/wf.png';
-import wharton from '../assets/logos/wharton.png';
+import abb from '../assets/logos/abb-logo.png';
+import nvidia from '../assets/logos/nvidia-logo.png';
+import nissan from '../assets/logos/nissan.png';
+import nintendo from '../assets/logos/nintendo.png';
+import reactjs from '../assets/logos/nodejs.png';
+import bosh from '../assets/logos/bosh.png';
+import harvard from '../assets/logos/harvard.png';
 
 
 const PartnersBanner = () => {
   // Sample university logos - replace with your actual partner logos
   const partners = [
-    { id: 1, name: 'Harvard', logo: ais },
-    { id: 2, name: 'Stanford', logo:exelon },
-    { id: 3, name: 'MIT', logo:amazon },
-    { id: 4, name: 'Oxford', logo: google },
-    { id: 5, name: 'Cambridge', logo: thairung },
-    { id: 6, name: 'ETH Zurich', logo: wf },
-    { id: 7, name: 'Tokyo University', logo: wharton },
-    { id: 8, name: 'National University', logo: wharton },
+    { id: 1, name: 'Harvard', logo: abb },
+    { id: 2, name: 'Stanford', logo:nvidia },
+    { id: 3, name: 'MIT', logo:nissan },
+    { id: 4, name: 'Oxford', logo: nintendo },
+    { id: 5, name: 'Cambridge', logo: reactjs },
+    { id: 6, name: 'ETH Zurich', logo: bosh},
+    { id: 7, name: 'Tokyo University', logo: harvard },
+
   ];
 
   // Duplicate the array to create seamless infinite scroll

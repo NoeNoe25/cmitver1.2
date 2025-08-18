@@ -5,6 +5,7 @@
   padding: 4rem 8% 2rem;
   position: relative;
   overflow: hidden;
+  text-align: center;
 }
 
 .footer::before {
@@ -73,8 +74,19 @@
   color: var(--text-light);
   position: relative;
   padding-bottom: 0.5rem;
-}
 
+}
+.name {
+  padding-bottom: 8px;
+  border-bottom: 3px solid;
+  border-image: linear-gradient(
+    to right,
+    transparent 25%,
+    var(--gold-copper) 25%,
+    var(--gold-copper) 75%,
+    transparent 75%
+  ) 1;
+}
 .link-group h4::after {
   content: '';
   position: absolute;
@@ -82,7 +94,6 @@
   bottom: 0;
   width: 40px;
   height: 2px;
-  background-color: var(--gold-copper);
 }
 
 .link-group ul {

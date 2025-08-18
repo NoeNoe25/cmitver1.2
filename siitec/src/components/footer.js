@@ -15,7 +15,7 @@ const Footer = () => {
           
           <div className="footer-links-horizontal">
             <div className="link-group">
-              <h4>Academics</h4>
+              <h4 class="name">Academics</h4>
               <ul>
                 <li><a href="#">Programs</a></li>
                 <li><a href="#">Admissions</a></li>
@@ -24,7 +24,7 @@ const Footer = () => {
             </div>
             
             <div className="link-group">
-              <h4>About</h4>
+              <h4 class="name">About</h4>
               <ul>
                 <li><a href="#">Our Story</a></li>
                 <li><a href="#">Faculty</a></li>
@@ -33,7 +33,7 @@ const Footer = () => {
             </div>
             
             <div className="link-group">
-              <h4>Connect</h4>
+             < h4 class="name">Connect</h4>
               <ul>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">News & Events</a></li>
@@ -43,7 +43,7 @@ const Footer = () => {
           </div>
           
           <div className="footer-social">
-            <h4>Follow Us</h4>
+            <h4 class="name">Follow Us</h4>
             <div className="social-icons">
               <a href="#"><i className="fab fa-twitter"></i></a>
               <a href="#"><i className="fab fa-linkedin"></i></a>
