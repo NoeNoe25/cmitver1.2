@@ -178,7 +178,8 @@ const FacultyName = styled.h3`
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 40px;
     height: 2px;
     background-color: ${theme.colors.copper};
