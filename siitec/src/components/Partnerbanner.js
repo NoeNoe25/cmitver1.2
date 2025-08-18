@@ -28,7 +28,7 @@ const PartnersBanner = () => {
 
   return (
     <div className="partners-banner-container">
-      <h3 className="banner-title">Our Academic Partners</h3>
+      <h3 className="banner-title">Our Partners</h3>
       <div className="partners-banner">
         <div className="partners-track">
           {duplicatedPartners.map((partner, index) => (

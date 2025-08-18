@@ -4,7 +4,9 @@ import Header from './components/header';
 import Footer from './components/footer';
 import './App.css';
 import PartnersBanner from './components/Partnerbanner';
-import f
+import Faculty from './components/faculty';
+import Hero from './components/hero';
+import Departments from './components/departments';
 
 function App() {
   return (
