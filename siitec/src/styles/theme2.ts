@@ -1,19 +1,24 @@
-// Theme configuration for the SIITec website - Tech-inspired
+// Theme configuration for the SIITec website - Grey and Copper theme
 
 export const theme = {
   colors: {
-    copper: '#B87333', // Copper color
-    gray: '#758384', // Specified gray color
+    copper: '#B87333', // Primary copper color
+    copperLight: '#D4A76A', // Lighter copper shade
+    copperDark: '#8E5A28', // Darker copper shade
+    gray: '#758384', // Primary gray color
+    grayLight: '#A9B2B3', // Lighter gray shade
+    grayDark: '#4A5455', // Darker gray shade
     white: '#FFFFFF',
     black: '#000000',
     background: '#F5F5F5',
     text: '#333333',
-    accent: '#D4AF37', // Gold accent to complement copper
+    accent: '#B87333', // Using copper as accent instead of gold
+    // Maintaining tech colors but with copper/gray focus
     tech: {
-      neon: '#00FFFF', // Cyan neon accent
-      darkBlue: '#0A192F', // Dark blue tech background
-      highlight: '#64FFDA', // Highlight for tech elements
-      grid: 'rgba(184, 115, 51, 0.2)', // Copper grid lines with transparency
+      neon: '#B87333', // Changed from cyan to copper
+      darkBlue: '#4A5455', // Changed from dark blue to dark gray
+      highlight: '#D4A76A', // Changed to light copper
+      grid: 'rgba(117, 131, 132, 0.2)', // Changed to gray grid lines
     },
   },
   fonts: {
