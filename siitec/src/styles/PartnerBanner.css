@@ -7,6 +7,8 @@
   margin: 2rem 0;
   position: relative;
   overflow: hidden;
+  /* Adding subtle slate accent */
+  box-shadow: 0 0 15px rgba(42, 51, 66, 0.08); /* Very subtle slate shadow */
 }
 
 .banner-title {
@@ -17,6 +19,21 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   text-shadow: 0 0 10px rgba(184, 115, 51, 0.2); /* Subtle copper glow */
+  /* Adding slate accent to title */
+  position: relative;
+  font-weight: 600;
+}
+
+.banner-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background-color: var(--color-slate-dark, #2a3342); /* Using your slate color */
+  opacity: 0.7;
 }
 
 .partners-banner {
@@ -32,6 +49,7 @@
   animation: scroll 30s linear infinite;
   width: calc(250px * 16); /* Adjust based on number of logos */
   will-change: transform;
+  padding: 0.5rem 0;
 }
 
 .partner-logo {
@@ -42,13 +60,21 @@
   align-items: center;
   justify-content: center;
   padding: 0 1rem;
-  transition: var(--transition-medium);
+  transition: all 0.3s ease;
   filter: grayscale(40%) brightness(0.95);
+  /* Adding subtle slate border on logos */
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(42, 51, 66, 0.05);
 }
 
 .partner-logo:hover {
   filter: grayscale(0%) brightness(1);
   transform: scale(1.05);
+  /* Adding slate border on hover */
+  border-color: rgba(42, 51, 66, 0.2); /* Subtle slate border on hover */
+  box-shadow: 0 4px 12px rgba(42, 51, 66, 0.1);
 }
 
 .partner-logo img {
@@ -94,6 +120,10 @@
 }
 
 /* Style 3: Bounce animation */
+.alternate-style-2 .partners-track {
+  animation: scroll 30s linear infinite;
+}
+
 .alternate-style-2 .partner-logo {
   animation: bounce 3s ease-in-out infinite alternate;
 }
@@ -121,5 +151,33 @@
   
   .banner-title {
     font-size: 1.2rem;
+  }
+  
+  .banner-title::after {
+    width: 40px;
+    bottom: -5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .partners-track {
+    gap: 0.75rem;
+    animation-duration: 15s;
+  }
+  
+  .partner-logo {
+    height: 50px;
+    width: 120px;
+    padding: 0 0.5rem;
+  }
+  
+  .banner-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .partners-banner-container {
+    margin: 1.5rem 0;
+    padding: 1rem 0;
   }
 }
