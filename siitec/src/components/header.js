@@ -2,12 +2,30 @@
 import React, { useState, useRef, useEffect } from 'react';
 import '../styles/theme.css';
 import '../styles/header.css';
+// Import your logo image
+import logoImage from '../assets/siiteclogo (1).png'; // Adjust path as needed
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [language, setLanguage] = useState('EN');
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
   const navRef = useRef(null);
+
+  // Handle responsive behavior
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+      // Close menu when resizing to desktop if it was open
+      if (window.innerWidth >= 1024 && menuOpen) {
+        setMenuOpen(false);
+        setActiveDropdown(null);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [menuOpen]);
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -61,12 +79,30 @@ const Header = () => {
     { name: language === 'EN' ? 'Contact' : 'ติดต่อ', link: '#contact' }
   ];
 
+  // Smart description text that adapts to screen size
+  const getDescriptionText = () => {
+    if (isMobile) {
+      return language === 'EN' ? 'SII Tech' : 'สาขาเทคโนโลยี';
+    }
+    
+    return language === 'EN' 
+      ? 'School of Integrated Innovative Technology' 
+      : 'คณะเทคโนโลยีบูรณาการนวัตกรรม';
+  };
+
   return (
     <header className="header">
       <div className="header-container">
         <div className="logo">
-          <h1>Sii<span>Tec</span></h1>
-          <p>{language === 'EN' ? 'School of Integrated Innovative Technology' : 'คณะเทคโนโลยีบูรณาการนวัตกรรม'}</p>
+          {/* Replace text with logo image */}
+          <a href="/" className="logo-link">
+            <img 
+              src={logoImage} 
+              alt="SiiTec - School of Integrated Innovative Technology" 
+              className="logo-image"
+            />
+          </a>
+          
         </div>
         
         <button 

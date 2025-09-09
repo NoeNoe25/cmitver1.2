@@ -2,23 +2,33 @@
 
 export const theme = {
   colors: {
-    copper: '#B87333', // Primary copper color
-    copperLight: '#D4A76A', // Lighter copper shade
-    copperDark: '#8E5A28', // Darker copper shade
-    gray: '#758384', // Primary gray color
-    grayLight: '#A9B2B3', // Lighter gray shade
-    grayDark: '#4A5455', // Darker gray shade
-    white: '#FFFFFF',
-    black: '#000000',
-    background: '#F5F5F5',
-    text: '#333333',
-    accent: '#B87333', // Using copper as accent instead of gold
-    // Maintaining tech colors but with copper/gray focus
-    tech: {
-      neon: '#B87333', // Changed from cyan to copper
-      darkBlue: '#4A5455', // Changed from dark blue to dark gray
-      highlight: '#D4A76A', // Changed to light copper
-      grid: 'rgba(117, 131, 132, 0.2)', // Changed to gray grid lines
+   // Brand Copper Shades
+  copper: '#B87333',       // Primary copper
+  copperLight: '#E6C08C',  // Lighter copper (softer for light UI)
+  copperDark: '#8E5A28',   // Darker copper for contrast
+
+  // Neutral Grays
+  gray: '#758384',         // Medium gray
+  grayLight: '#D1D6D7',    // Lighter gray (background elements)
+  grayDark: '#4A5455',     // Darker gray (text/icons)
+
+  // Base Colors
+  white: '#FFFFFF',
+  black: '#000000',
+  background: '#FAFAFA',   // Slightly lighter than #F5F5F5
+  surface: '#FFFFFF',      // Cards, containers
+  text: '#2A2A2A',         // Darker than original #333 for clarity
+  subtext: '#5A5A5A',      // Muted secondary text
+
+  // Accent (brand highlight)
+  accent: '#B87333',       // Copper stays as accent
+
+  // Tech-inspired elements
+  tech: {
+    neon: '#B87333',                       // Copper glow style
+    darkBlue: '#4A5455',                   // Dark gray used in logo
+    highlight: '#E6C08C',                  // Lighter copper highlight
+    grid: 'rgba(117, 131, 132, 0.15)',
     },
   },
   fonts: {

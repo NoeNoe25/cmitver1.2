@@ -1,7 +1,7 @@
 /* Departments.css */
 .departments-section {
   padding: var(--spacing-xxl, 3rem) 0;
-  background-color: var(--slate-darker);
+  background-color: #FAFAFA; /* Light background */
   position: relative;
   overflow: hidden;
 }
@@ -13,7 +13,7 @@
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background-color: rgba(201, 166, 107, 0.1);
+  background-color: rgba(202, 140, 80, 0.08); /* Light copper tint */
   z-index: 1;
 }
 
@@ -24,7 +24,7 @@
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background-color: rgba(117, 131, 132, 0.1);
+  background-color: rgba(76, 83, 84, 0.05); /* Light gray tint */
   z-index: 1;
 }
 
@@ -43,7 +43,7 @@
 
 .section-title {
   font-size: 2.5rem;
-  color: var(--gold-copper);
+  color: #B87333; /* Copper color */
   margin-bottom: var(--spacing-md, 1rem);
   display: inline-block;
   position: relative;
@@ -58,14 +58,14 @@
   transform: translateX(-50%);
   width: 80px;
   height: 3px;
-  background-color: var(--gold-copper);
+  background-color: #B87333; /* Copper color */
 }
 
 .section-description {
   font-size: 1.1rem;
   max-width: 700px;
   margin: 0 auto;
-  color: var(--text-light);
+  color: #5A5A5A; /* Muted text color */
   font-family: var(--font-secondary, 'Roboto', sans-serif);
 }
 
@@ -76,20 +76,19 @@
 }
 
 .department-card {
-  background-color: var(--slate-dark);
+  background-color: #FFFFFF; /* White card background */
   border-radius: var(--border-radius-medium, 8px);
   overflow: hidden;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* Lighter shadow */
   transition: var(--transition-medium);
-  border: var(--border-slate);
+  border: 1px solid rgba(184, 115, 51, 0.15); /* Light copper border */
 }
 
 .department-card:hover {
   transform: translateY(-10px);
-  box-shadow: var(--shadow-lg), 0 10px 30px rgba(201, 166, 107, 0.3);
-  border-color: var(--gold-copper);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12), 0 10px 30px rgba(202, 140, 80, 0.15); /* Lighter shadow with copper tint */
+  border-color: #cA8c50; /* Lighter copper border */
 }
-
 
 .department-img {
   width: 100%;
@@ -98,9 +97,10 @@
   transition: transform 0.5s ease;
 }
 
-.department-card:hover .department-image img {
+.department-card:hover .department-img {
   transform: scale(1.05);
 }
+
 .department-content {
   padding: var(--spacing-lg, 1.5rem);
 }
@@ -108,7 +108,7 @@
 .department-title {
   font-size: 1.5rem;
   margin-bottom: var(--spacing-md, 1rem);
-  color: var(--gold-copper);
+  color: #B87333; /* Copper color */
   position: relative;
   padding-bottom: var(--spacing-sm, 0.5rem);
   font-family: var(--font-primary);
@@ -121,12 +121,12 @@
   left: 0;
   width: 50px;
   height: 2px;
-  background-color: var(--gold-copper);
+  background-color: #B87333; /* Copper color */
 }
 
 .department-description {
   margin-bottom: var(--spacing-md, 1rem);
-  color: var(--text-light);
+  color: #4c5354; /* Gray text color */
   line-height: 1.6;
   font-family: var(--font-secondary);
 }
@@ -141,21 +141,21 @@
   margin-bottom: var(--spacing-sm, 0.5rem);
   display: flex;
   align-items: center;
-  color: var(--text-light);
+  color: #4c5354; /* Gray text color */
   font-family: var(--font-secondary);
 }
 
 .feature-item::before {
   content: '✓';
-  color: var(--gold-copper);
+  color: #cA8c50; /* Lighter copper color */
   margin-right: var(--spacing-sm, 0.5rem);
   font-weight: bold;
 }
 
 .learn-more-button {
   background-color: transparent;
-  color: var(--gold-copper);
-  border: 2px solid var(--gold-copper);
+  color: #B87333; /* Copper color */
+  border: 2px solid #B87333;
   padding: var(--spacing-sm, 0.5rem) var(--spacing-lg, 1.5rem);
   border-radius: var(--border-radius-medium, 8px);
   font-weight: 600;
@@ -165,8 +165,8 @@
 }
 
 .learn-more-button:hover {
-  background-color: var(--gold-copper);
-  color: var(--text-light);
+  background-color: #B87333; /* Copper color */
+  color: #FFFFFF; /* White text */
 }
 
 /* Responsive adjustments */
@@ -189,7 +189,7 @@
     font-size: 2rem;
   }
   
-  .department-image {
+  .department-img {
     height: 180px;
   }
 }

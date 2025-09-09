@@ -2,14 +2,14 @@
    HEADER BASE STYLES
 ===================== */
 .header {
-  background-color:var(--slate-darker);
+  background-color: rgba(255, 255, 255, 0.95); /* White with slight transparency */
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Lighter shadow */
   position: sticky;
   top: 0;
   z-index: 1000;
   width: 100%;
-  border-bottom: 1px solid rgba(184, 115, 51, 0.3);
+  border-bottom: 1px solid rgba(184, 115, 51, 0.2); /* Lighter copper border */
   transition: all 0.3s ease;
   display: flex;
   justify-content: center;
@@ -17,53 +17,114 @@
 
 .header-container {
   max-width: 1200px;
-  margin:0 auto;
+  margin: 0 auto;
   padding: 0 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 70px;
+  width: 100%;
 }
 
 .dropdown-toggle {
   background: none; /* no background */
   border: none;
 }
+
 /* =====================
-   LOGO STYLES
+   SMART LOGO STYLES
 ===================== */
-.logo h1 {
-  font-size: 2rem;
-  margin: 0;
-  color: var(--text-light);
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+.logo-link {
+  display: inline-block;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
-.logo h1 span {
-  color: var(--gold-copper);
-  position: relative;
-  text-shadow: 0 0 10px rgba(184, 115, 51, 0.5);
+.logo-image {
+  height: 250px; /* Default size */
+  width: auto;
+  object-fit: contain;
+  transition: var(--transition-medium);
 }
 
-.logo h1 span::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, rgba(184, 115, 51, 0.7), rgba(184, 115, 51, 0.3));
-  box-shadow: 0 0 8px rgba(184, 115, 51, 0.5);
+.logo-image:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
 }
 
-.logo p {
-  font-size: 0.6rem;
-  margin: 0;
-  color: var(--text-greywhite);
+/* Smart logo container */
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 0; /* Allows text truncation */
+}
+
+.logo-description {
+  margin: 2px 0 0 0;
+  font-size: 0.7rem;
+  color: #5A5A5A;
   letter-spacing: 0.5px;
   opacity: 0.8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+/* Responsive logo adjustments */
+@media (min-width: 1200px) {
+  .logo-image {
+    height: 55px;
+  }
+  
+  .logo-description {
+    font-size: 0.75rem;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .logo-image {
+    height: 45px;
+  }
+  
+  .logo-description {
+    font-size: 0.65rem;
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-image {
+    height: 40px;
+  }
+  
+  .logo-description {
+    font-size: 0.6rem;
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-image {
+    height: 35px;
+  }
+  
+  .logo-description {
+    font-size: 0.55rem;
+    max-width: 120px;
+  }
+}
+
+/* Hide description on very small screens if needed */
+@media (max-width: 360px) {
+  .logo-description {
+    display: none;
+  }
 }
 
 /* =====================
@@ -87,8 +148,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem ;
-  color: var(--text-light);
+  padding: 1rem;
+  color: #2A2A2A; /* Dark text color */
   text-decoration: none;
   font-weight: 500;
   transition: var(--transition-medium);
@@ -104,27 +165,30 @@
   left: 50%;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, rgba(184, 115, 51, 0.7), rgba(184, 115, 51, 0.3));
+  background: linear-gradient(90deg, rgba(184, 115, 51, 0.5), rgba(184, 115, 51, 0.2)); /* Lighter copper gradient */
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
 
 .nav-link:hover {
-  color: var(--gold-copper-light);
-  text-shadow: 0 0 8px rgba(184, 115, 51, 0.3);
+  color: #cA8c50; /* Lighter copper color */
+  text-shadow: 0 0 8px rgba(202, 140, 80, 0.2); /* Softer glow */
 }
 
 .nav-link:hover:before {
   width: 80%;
 }
+
 .dropdown-toggle:hover {
-  background: none; /* prevent grey background */
-  color: var(--gold-copper-light); /* only text color change */
+  background: none; /* prevent background */
+  color: #cA8c50; /* only text color change */
 }
+
 .dropdown-item:hover {
-  background-color: rgba(201, 166, 107, 0.12); /* keep nice hover */
-  color: var(--gold-copper-light);
+  background-color: rgba(202, 140, 80, 0.1); /* Light copper tint */
+  color: #cA8c50; /* Lighter copper color */
 }
+
 /* =====================
    DROPDOWN MENU (FIT NAV BAR)
 ===================== */
@@ -144,14 +208,14 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: var(--slate-darker);
+  background-color: #FFFFFF; /* White background */
   min-width: 180px;
   width: 100%; /* fit parent */
   border-radius: 0 0 var(--border-radius) var(--border-radius);
-  border: 1px solid var(--slate-dark);
+  border: 1px solid rgba(184, 115, 51, 0.2); /* Light copper border */
   border-top: none;
   padding: 0.3rem 0;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Lighter shadow */
   opacity: 0;
   visibility: hidden;
   transform: translateY(8px);
@@ -170,15 +234,15 @@
 .dropdown-item {
   display: block;
   padding: 0.75rem 1.2rem;
-  color: var(--text-light);
+  color: #2A2A2A; /* Dark text color */
   text-decoration: none;
   transition: var(--transition-fast);
   font-size: 0.95rem;
 }
 
 .dropdown-item:hover {
-  background-color: rgba(201, 166, 107, 0.12);
-  color: var(--gold-copper-light);
+  background-color: rgba(202, 140, 80, 0.1); /* Light copper tint */
+  color: #cA8c50; /* Lighter copper color */
 }
 
 /* =====================
@@ -191,8 +255,8 @@
 }
 
 .apply-button {
-  background: linear-gradient(135deg, var(--gold-copper) 0%, var(--gold-copper-light) 100%);
-  color: var(--slate-darker);
+  background: linear-gradient(135deg, #B87333 0%, #cA8c50 100%); /* Copper gradient */
+  color: #FFFFFF; /* White text */
   border: none;
   padding: 0.7rem 1.5rem;
   border-radius: var(--border-radius);
@@ -200,7 +264,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 0.95rem;
-  box-shadow: 0 4px 15px rgba(184, 115, 51, 0.3);
+  box-shadow: 0 4px 15px rgba(184, 115, 51, 0.2); /* Softer shadow */
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -213,14 +277,14 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, var(--gold-copper-light) 0%, var(--gold-copper) 100%);
+  background: linear-gradient(135deg, #cA8c50 0%, #B87333 100%); /* Reversed copper gradient */
   transition: all 0.4s ease;
   z-index: -1;
 }
 
 .apply-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(184, 115, 51, 0.4);
+  box-shadow: 0 6px 20px rgba(184, 115, 51, 0.3); /* Softer glow */
 }
 
 .apply-button:hover:before {
@@ -229,8 +293,8 @@
 
 .language-switcher {
   background: none;
-  border: 1px solid var(--gold-copper);
-  color: var(--text-light);
+  border: 1px solid #cA8c50; /* Lighter copper border */
+  color: #2A2A2A; /* Dark text color */
   font-weight: 500;
   cursor: pointer;
   padding: 0.5rem 1rem;
@@ -239,7 +303,7 @@
 }
 
 .language-switcher:hover {
-  background-color: rgba(201, 166, 107, 0.1);
+  background-color: rgba(202, 140, 80, 0.1); /* Light copper tint */
 }
 
 /* =====================
@@ -261,7 +325,7 @@
   display: block;
   width: 100%;
   height: 3px;
-  background-color: var(--gold-copper);
+  background-color: #B87333; /* Copper color */
   border-radius: 2px;
   transition: var(--transition-medium);
 }
@@ -292,11 +356,11 @@
     top: 70px;
     left: 0;
     width: 100%;
-    background-color: var(--slate-darker);
+    background-color: #FFFFFF; /* White background */
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Lighter shadow */
   }
 
   .nav.active {
@@ -313,13 +377,14 @@
 
   .nav-item {
     width: 100%;
-    border-bottom: 1px solid var(--slate-dark);
+    border-bottom: 1px solid rgba(184, 115, 51, 0.2); /* Light copper border */
   }
 
   .nav-link, .dropdown-toggle {
     padding: 1rem 0;
     width: 100%;
     text-align: left;
+    color: #2A2A2A; /* Dark text color */
   }
 
   .dropdown-menu {
@@ -369,13 +434,5 @@
 @media (max-width: 768px) {
   .header-container {
     padding: 0 1.2rem;
-  }
-  
-  .logo h1 {
-    font-size: 1.6rem;
-  }
-  
-  .logo p {
-    font-size: 0.75rem;
   }
 }

@@ -1,7 +1,7 @@
 /* src/styles/faculty.css */
 .faculty {
   padding: 6rem 8%;
-  background-color: var(--slate-darker);
+  background-color: #FAFAFA; /* Light background */
   position: relative;
   overflow: hidden;
 }
@@ -27,12 +27,12 @@
 .section-header h2 {
   font-size: 2.8rem;
   margin-bottom: 1.2rem;
-  color: var(--text-light);
+  color: #2A2A2A; /* Dark text color */
   font-weight: 700;
 }
 
 .section-header h2 span {
-  color: var(--gold-copper);
+  color: #B87333; /* Copper color */
   position: relative;
 }
 
@@ -43,11 +43,11 @@
   left: 0;
   width: 100%;
   height: 3px;
-  background: var(--tech-gradient);
+  background: linear-gradient(90deg, #B87333, #cA8c50); /* Copper gradient */
 }
 
 .section-header p {
-  color: var(--slate-lighter);
+  color: #5A5A5A; /* Muted text color */
   font-size: 1.2rem;
   max-width: 700px;
   margin: 0 auto;
@@ -65,19 +65,19 @@
 }
 
 .faculty-card {
-  background-color: var(--slate-dark);
+  background-color: #FFFFFF; /* White card background */
   border-radius: var(--border-radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Lighter shadow */
   transition: var(--transition-medium);
-  border: 1px solid var(--slate-light);
+  border: 1px solid rgba(184, 115, 51, 0.15); /* Light copper border */
   position: relative;
 }
 
 .faculty-card:hover {
   transform: translateY(-10px);
-  box-shadow: var(--shadow-lg), 0 10px 30px rgba(201, 166, 107, 0.2);
-  border-color: var(--gold-copper);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12), 0 10px 30px rgba(202, 140, 80, 0.15); /* Lighter shadow with copper tint */
+  border-color: #cA8c50; /* Lighter copper border */
 }
 
 .faculty-image {
@@ -105,9 +105,9 @@
   height: 100%;
   background: linear-gradient(
     to bottom,
-    rgba(30, 30, 30, 0) 0%,
-    rgba(30, 30, 30, 0.8) 100%
-  );
+    rgba(250, 250, 250, 0) 0%,
+    rgba(250, 250, 250, 0.7) 100%
+  ); /* Light gradient overlay */
   z-index: 1;
 }
 
@@ -115,13 +115,13 @@
   position: absolute;
   bottom: 30px;
   left: 25px;
-  background: var(--tech-gradient);
-  color: var(--slate-darker);
+  background: linear-gradient(90deg, #B87333, #cA8c50); /* Copper gradient */
+  color: #FFFFFF; /* White text */
   padding: 0.6rem 1.2rem;
   border-radius: var(--border-radius);
   font-size: 0.85rem;
   font-weight: 700;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 15px rgba(184, 115, 51, 0.25); /* Softer shadow */
   z-index: 2;
   letter-spacing: 0.5px;
 }
@@ -134,12 +134,12 @@
 .faculty-card h3 {
   font-size: 1.5rem;
   margin-bottom: 0.6rem;
-  color: var(--text-light);
+  color: #2A2A2A; /* Dark text color */
   font-weight: 600;
 }
 
 .faculty-card .position {
-  color: var(--gold-copper);
+  color: #B87333; /* Copper color */
   font-weight: 500;
   margin-bottom: 1.5rem;
   font-size: 1rem;
@@ -159,17 +159,17 @@
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background-color: var(--text-dark);
-  color: var(--gold-copper);
+  background-color: #F5F5F5; /* Light gray background */
+  color: #B87333; /* Copper color */
   transition: var(--transition-medium);
   font-size: 1rem;
 }
 
 .faculty-social a:hover {
-  background-color: var(--gold-copper);
-  color: var(--slate-darker);
+  background-color: #B87333; /* Copper background */
+  color: #FFFFFF; /* White text */
   transform: translateY(-3px);
-  box-shadow: 0 4px 10px rgba(201, 166, 107, 0.3);
+  box-shadow: 0 4px 10px rgba(184, 115, 51, 0.25); /* Softer shadow */
 }
 
 /* Circuit pattern effect */
