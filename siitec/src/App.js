@@ -14,9 +14,9 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <PartnersBanner/>
         <Departments />
         <Faculty />
+        <PartnersBanner/>
       </main>
       <Footer />
     </div>
