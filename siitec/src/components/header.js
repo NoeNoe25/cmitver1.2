@@ -9,13 +9,11 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [language, setLanguage] = useState('EN');
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
   const navRef = useRef(null);
 
   // Handle responsive behavior
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 1024);
       // Close menu when resizing to desktop if it was open
       if (window.innerWidth >= 1024 && menuOpen) {
         setMenuOpen(false);
@@ -79,16 +77,6 @@ const Header = () => {
     { name: language === 'EN' ? 'Contact' : 'ติดต่อ', link: '#contact' }
   ];
 
-  // Smart description text that adapts to screen size
-  const getDescriptionText = () => {
-    if (isMobile) {
-      return language === 'EN' ? 'SII Tech' : 'สาขาเทคโนโลยี';
-    }
-    
-    return language === 'EN' 
-      ? 'School of Integrated Innovative Technology' 
-      : 'คณะเทคโนโลยีบูรณาการนวัตกรรม';
-  };
 
   return (
     <header className="header">
